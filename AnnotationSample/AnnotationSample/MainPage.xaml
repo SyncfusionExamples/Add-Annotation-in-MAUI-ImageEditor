@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:imageEditor="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion.Maui.ImageEditor"
+             x:Class="AnnotationSample.MainPage">
+
+    <Grid RowDefinitions="0.9*, 0.1*">
+        <imageEditor:SfImageEditor x:Name="imageEditor"
+                                   Source="image.png"
+                                   ImageLoaded="OnImageEditorLoaded">
+
+        </imageEditor:SfImageEditor>
+        <StackLayout Grid.Row="1" Margin="10" Orientation="Horizontal">
+            <Label Text="ShapeID :" VerticalOptions="Center" />
+            <Entry x:Name="shape" WidthRequest ="50" HeightRequest="50"/>
+            <Button Text="SelectShape" Margin="25,0,0,0" 
+                Clicked="SelectShape_Clicked" WidthRequest="150" />
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
